@@ -1,0 +1,46 @@
+<div class="container">
+    <mat-toolbar>
+        <span>Crear Role</span>
+     </mat-toolbar>
+
+     <mat-card style="margin-top: 10px;" >
+
+      <form [formGroup]="form" (ngSubmit)="agregarRol()">
+          <mat-grid-list cols="1" rowHeight="70px">
+            <mat-grid-tile [colspan]="1" [rowspan]="1">
+              <mat-form-field class="ancho">
+                <mat-label>Role</mat-label>
+                <input matInput>
+              </mat-form-field>
+            </mat-grid-tile>
+          </mat-grid-list>
+
+          <mat-grid-list cols="1" rowHeight="70px">
+            <mat-grid-tile [colspan]="1" [rowspan]="1">
+              <mat-form-field class="ancho">
+                <mat-label>Alcance</mat-label>
+                <input matInput>
+              </mat-form-field>
+            </mat-grid-tile>
+          </mat-grid-list>
+
+          <mat-grid-list cols="1" rowHeight="70px">
+            <mat-grid-tile [colspan]="1" [rowspan]="1">
+              <mat-form-field class="ancho">
+                <mat-label>Permisos</mat-label>
+                <input matInput>
+              </mat-form-field>
+            </mat-grid-tile>
+          </mat-grid-list>
+
+          <mat-grid-list cols="1" rowHeight="70px">
+            <mat-grid-tile [colspan]="1" [rowspan]="1">
+                <button mat-raised-button style="margin-right: 40px;">Cancelar</button>
+                <button type="submit"  mat-raised-button color="primary">Guardar</button>
+            </mat-grid-tile>
+          </mat-grid-list>
+
+        </form>
+
+     </mat-card>
+</div>

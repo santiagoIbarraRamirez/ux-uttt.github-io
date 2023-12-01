@@ -1,0 +1,45 @@
+<div class="container">
+    <mat-toolbar>
+        <span Style="font-size:50px;">Crear viajes </span>
+     </mat-toolbar>
+
+     <mat-card style="margin-top: 10px;" >
+
+        <form [formGroup]="form" (ngSubmit)="agregarViaje()">
+          <mat-grid-list cols="1" rowHeight="70px" >
+            <mat-grid-tile [colspan]="1" [rowspan]="1">
+              <mat-form-field class="ancho">
+                <mat-label>Nombre de Cliente</mat-label>
+                <input matInput autocomplete="off" formControlName="nombreCliente">
+              </mat-form-field>
+            </mat-grid-tile>
+          </mat-grid-list>
+
+          <mat-grid-list cols="1" rowHeight="70px">
+            <mat-grid-tile [colspan]="1" [rowspan]="1">
+              <mat-form-field class="ancho">
+                <mat-label>Precio</mat-label>
+                <input matInput autocomplete="off" formControlName="precio">
+              </mat-form-field>
+            </mat-grid-tile>
+          </mat-grid-list>
+
+          <mat-grid-list cols="1" rowHeight="70px">
+            <mat-grid-tile [colspan]="1" [rowspan]="1">
+              <mat-form-field class="ancho">
+                <mat-label>Lugar de Origen</mat-label>
+                <input matInput autocomplete="off" formControlName="origen">
+              </mat-form-field>
+            </mat-grid-tile>
+          </mat-grid-list>
+
+          <mat-grid-list cols="1" rowHeight="70px">
+            <mat-grid-tile [colspan]="1" [rowspan]="1">
+                <button mat-raised-button style="margin-right: 40px;">Cancelar</button>
+                <button type="submit" [disabled]="form.invalid" mat-raised-button color="primary">Guardar</button>
+            </mat-grid-tile>
+          </mat-grid-list>
+        </form>
+
+     </mat-card>
+</div>

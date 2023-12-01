@@ -1,0 +1,27 @@
+<div class="body">
+    <div class="login">
+        <mat-spinner *ngIf="loading" class='spinner' diameter="40"></mat-spinner>
+        <form *ngIf="!loading" [formGroup]="form" (ngSubmit)="ingresar()">
+            <div class="i-logo">
+                <img class="imglogin mat-elevation-z8" src="assets/freightsenseglobal-logo.png" alt="">
+            </div>
+            <h1>Login</h1>
+                <mat-form-field class="ancho">
+                <mat-label>Usuario</mat-label>
+                <input matInput formControlName="usuario">
+            </mat-form-field>
+            
+            <mat-form-field class="ancho">
+                <mat-label>Contrase&ntilde;a</mat-label>
+                <input  type="password" matInput formControlName="password">
+            </mat-form-field>
+            
+            <div class="ancho">
+                <button type= "submit" class="ancho"  mat-raised-button color="primary" [disabled]="form.invalid">Entrar</button>
+            </div>
+            
+        </form>
+
+    </div>
+</div>
+    
